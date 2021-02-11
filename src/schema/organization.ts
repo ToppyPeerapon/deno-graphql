@@ -29,6 +29,7 @@ export const OrganizationType = gql`
     role: String
     memberType: String
     parentMember: String
+    youtubeUrl: String
     contacts: [Contact!]
     address: Address
     children: String
@@ -42,6 +43,6 @@ export const OrganizationType = gql`
   }
 
   type Query {
-    getOrganizations: Organization
+    organizations: Organization
   }
 `;

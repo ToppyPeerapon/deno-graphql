@@ -1,10 +1,12 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
-import { applyGraphQL, gql } from "https://deno.land/x/oak_graphql/mod.ts";
+import { applyGraphQL } from "https://deno.land/x/oak_graphql/mod.ts";
+import { oakCors } from "https://deno.land/x/cors/mod.ts";
 
 import { Schema } from "./src/schema/index.ts";
 import { resolvers } from "./src/resolver/index.ts";
 
 const app = new Application();
+app.use(oakCors());
 
 const GraphQLService = await applyGraphQL<Router>({
   Router,
