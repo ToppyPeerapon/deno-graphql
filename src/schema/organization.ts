@@ -16,7 +16,7 @@ export const OrganizationType = gql`
     status: String
     type: String
     memberId: ID
-    mobileNumber: String
+    mobile_number: String
     createdAt: String
     updatedAt: String 
   }
@@ -33,6 +33,7 @@ export const OrganizationType = gql`
     contacts: [Contact!]
     address: Address
     children: String
+    description: String
   }
 
   type Organization {
